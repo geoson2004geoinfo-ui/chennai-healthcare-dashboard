@@ -51,7 +51,8 @@ access_zones = gpd.read_file(
 
 m = folium.Map(
     location=[13.08, 80.27],
-    zoom_start=11
+    zoom_start=11,
+    control_scale=True
 )
 
 # -----------------------------------
@@ -59,7 +60,8 @@ m = folium.Map(
 # -----------------------------------
 
 hospital_layer = folium.FeatureGroup(
-    name='Existing Hospitals'
+    name='Existing Hospitals',
+    show=True
 )
 
 for idx, row in hospitals_dashboard.iterrows():
@@ -83,7 +85,8 @@ hospital_layer.add_to(m)
 # -----------------------------------
 
 access_layer = folium.FeatureGroup(
-    name='Access Zones'
+    name='Access Zones',
+    show=True
 )
 
 folium.GeoJson(
@@ -103,7 +106,8 @@ access_layer.add_to(m)
 # -----------------------------------
 
 underserved_layer = folium.FeatureGroup(
-    name='Underserved Regions'
+    name='Underserved Regions',
+    show=True
 )
 
 folium.GeoJson(
@@ -123,7 +127,8 @@ underserved_layer.add_to(m)
 # -----------------------------------
 
 proposed_layer = folium.FeatureGroup(
-    name='Proposed Healthcare Facility'
+    name='Proposed Healthcare Facility',
+    show=True
 )
 
 for idx, row in proposed_dashboard.iterrows():
@@ -149,7 +154,9 @@ proposed_layer.add_to(m)
 # -----------------------------------
 # Layer Control
 # -----------------------------------
+
 folium.LayerControl(
+    position='topright',
     collapsed=True
 ).add_to(m)
 
@@ -159,8 +166,8 @@ folium.LayerControl(
 
 st_folium(
     m,
-    width=1400,
-    height=750
+    use_container_width=True,
+    height=700
 )
 
 # -----------------------------------
