@@ -189,26 +189,52 @@ redundant overlap with existing hospital service areas.
 
 st.subheader("Before vs After Accessibility Impact")
 
-st.markdown("""
-### Key Accessibility Findings
+st.markdown("### Key Accessibility Findings")
 
-#### Before Intervention
+# -----------------------------------
+# Before Intervention
+# -----------------------------------
+
+with st.expander("Before Intervention"):
+
+    st.markdown("""
 - The identified underserved corridor experienced a nearest-hospital accessibility gap of approximately **3259.52 meters**.
 - Existing healthcare coverage in this region was comparatively weaker than surrounding urban areas.
 - Residents within this corridor were required to travel longer distances to reach nearby hospitals.
+""")
 
-#### Proposed Intervention
+# -----------------------------------
+# Proposed Intervention
+# -----------------------------------
+
+with st.expander("Proposed Intervention"):
+
+    st.markdown("""
 - A new healthcare facility was proposed at:
   - **Longitude:** 80.20319
   - **Latitude:** 13.11804
 - The proposed facility directly targets the identified accessibility gap region.
+""")
 
-#### Expected Accessibility Improvement
+# -----------------------------------
+# Expected Accessibility Improvement
+# -----------------------------------
+
+with st.expander("Expected Accessibility Improvement"):
+
+    st.markdown("""
 - Introduction of the proposed facility is expected to substantially reduce local travel burden.
 - The intervention improves healthcare accessibility coverage within the underserved corridor.
 - Spatial overlap with existing hospitals remains minimal, improving overall network efficiency.
+""")
 
-#### Budget and Optimization Decision
+# -----------------------------------
+# Budget and Optimization Decision
+# -----------------------------------
+
+with st.expander("Budget and Optimization Decision"):
+
+    st.markdown("""
 - Although the analysis allowed up to three new facilities, only one location demonstrated strong spatial feasibility and meaningful accessibility improvement.
 - Additional candidate locations either overlapped existing healthcare coverage or fell within infeasible coastal regions.
 - Therefore, the analysis recommended stopping after one facility due to diminishing marginal accessibility returns.
