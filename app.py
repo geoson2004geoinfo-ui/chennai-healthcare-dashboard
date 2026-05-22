@@ -45,10 +45,6 @@ access_zones = gpd.read_file(
     "access_zones.geojson"
 )
 
-city_boundary = gpd.read_file(
-    "chennai_boundary.geojson"
-)
-
 # -----------------------------------
 # Create Base Map
 # -----------------------------------
@@ -58,27 +54,6 @@ m = folium.Map(
     zoom_start=11,
     control_scale=True
 )
-
-# -----------------------------------
-# Chennai Boundary Layer
-# -----------------------------------
-
-boundary_layer = folium.FeatureGroup(
-    name='Chennai Boundary',
-    show=True
-)
-
-folium.GeoJson(
-    city_boundary,
-    style_function=lambda x: {
-        'fillColor': 'none',
-        'color': 'black',
-        'weight': 3,
-        'fillOpacity': 0
-    }
-).add_to(boundary_layer)
-
-boundary_layer.add_to(m)
 
 # -----------------------------------
 # Existing Hospitals Layer
