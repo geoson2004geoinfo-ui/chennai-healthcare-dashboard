@@ -149,8 +149,9 @@ proposed_layer.add_to(m)
 # -----------------------------------
 # Layer Control
 # -----------------------------------
-
-folium.LayerControl().add_to(m)
+folium.LayerControl(
+    collapsed=False
+).add_to(m)
 
 # -----------------------------------
 # Display Map
