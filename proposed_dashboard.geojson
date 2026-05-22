@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "proposed_dashboard",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "nearest_hospital_dist": 3259.5181888415359 }, "geometry": { "type": "Point", "coordinates": [ 80.203193932859094, 13.118043220014435 ] } }
+]
+}
