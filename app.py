@@ -150,7 +150,7 @@ proposed_layer.add_to(m)
 # Layer Control
 # -----------------------------------
 folium.LayerControl(
-    collapsed=False
+    collapsed=True
 ).add_to(m)
 
 # -----------------------------------
